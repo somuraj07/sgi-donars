@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
+import { Linkedin } from 'lucide-react';
 
 interface Feedback {
   id: string;
@@ -63,15 +64,28 @@ export default function FeedbackPage() {
 
         {/* Highlighted Personal Testimonial */}
         <div className="bg-red-100 border border-red-300 rounded-lg shadow p-6 mb-10">
-          <h2 className="text-2xl font-bold text-red-700 mb-2">My Thoughts - Shankar Kalyankar</h2>
-          <p className="text-gray-800 text-base leading-relaxed">
-            I have seen a lot of people in super-specialty hospitals struggling during blood emergencies. 
-            If this website can help even one person in need, I will be happy. 
-            The issue isn't about the availability of donors — our college has plenty of generous individuals. 
-            The real challenge is in the approach and connection. 
-            I believe this platform will bridge that gap and truly help save lives.
-          </p>
-        </div>
+      <h2 className="text-2xl font-bold text-red-700 mb-2">My Thoughts - Shankar Kalyankar</h2>
+      <p className="text-gray-800 text-base leading-relaxed">
+        I have seen a lot of people in super-specialty hospitals struggling during blood emergencies. 
+        If this website can help even one person in need, I will be happy. 
+        The issue isn't about the availability of donors — our college has plenty of generous individuals. 
+        The real challenge is in the approach and connection. 
+        I believe this platform will bridge that gap and truly help save lives.
+      </p>
+
+      {/* LinkedIn link with icon */}
+      <div className="mt-4 flex items-center gap-2">
+        <a
+          href="https://www.linkedin.com/in/somuraj7/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center text-blue-700 hover:underline"
+        >
+          <Linkedin className="w-5 h-5 mr-1" />
+          <span>Connect on LinkedIn</span>
+        </a>
+      </div>
+    </div>
 
         {feedbacks.length === 0 ? (
           <div className="text-center text-gray-500 text-lg">
