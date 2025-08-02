@@ -5,6 +5,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const bloodGroups = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"];
+const departments = ["ECE","CSE", "EEE", "CIVIL", "MECH", "MTECH", "MBA", "BBA", "OTHERS"];
 
 export default function DonarForm() {
   const [form, setForm] = useState({
@@ -17,7 +18,8 @@ export default function DonarForm() {
     avaliable: true,
   });
 
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false); // Optional for future drawer
+  const [deptDrawerOpen, setDeptDrawerOpen] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,8 +44,10 @@ export default function DonarForm() {
   return (
     <div className="max-w-xl mx-auto p-4 bg-red-50 min-h-screen">
       <h1 className="text-2xl font-bold mb-4 text-red-700 text-center">Donor Registration</h1>
+
       <form onSubmit={handleSubmit} className="space-y-4">
 
+        {/* Name */}
         <input
           type="text"
           placeholder="Name"
@@ -53,6 +57,7 @@ export default function DonarForm() {
           required
         />
 
+        {/* Email */}
         <input
           type="email"
           placeholder="Email"
@@ -62,6 +67,7 @@ export default function DonarForm() {
           required
         />
 
+        {/* Register No */}
         <input
           type="text"
           placeholder="Register No"
@@ -71,6 +77,7 @@ export default function DonarForm() {
           required
         />
 
+        {/* Phone */}
         <input
           type="text"
           placeholder="Phone Number"
@@ -80,42 +87,51 @@ export default function DonarForm() {
           required
         />
 
-        <input
-          type="text"
-          placeholder="Department"
-          value={form.department}
-          onChange={(e) => setForm({ ...form, department: e.target.value })}
-          className="w-full border border-red-200 p-2 rounded bg-white text-black"
-          required
-        />
-
-        {/* Mini Blood Group Drawer */}
+        {/* Department Drawer */}
         <div className="relative">
-          <p className="mb-1 font-semibold text-red-700">Blood Group:</p>
+          <p className="mb-1 font-semibold text-red-700">Department:</p>
           <button
             type="button"
-            onClick={() => setDrawerOpen(!drawerOpen)}
+            onClick={() => setDeptDrawerOpen((prev) => !prev)}
             className="w-full bg-white border border-red-300 p-2 rounded text-left text-black"
           >
-            {form.bloodGroup || "Select Blood Group"}
+            {form.department || "Select Department"}
           </button>
 
-          {drawerOpen && (
+          {deptDrawerOpen && (
             <div className="absolute left-0 top-full mt-1 w-full bg-white border border-red-300 rounded shadow-md z-10 max-h-40 overflow-y-auto">
-              {bloodGroups.map((group) => (
+              {departments.map((dept) => (
                 <button
-                  key={group}
+                  key={dept}
                   onClick={() => {
-                    setForm({ ...form, bloodGroup: group });
-                    setDrawerOpen(false);
+                    setForm({ ...form, department: dept });
+                    setDeptDrawerOpen(false);
                   }}
                   className="w-full text-left px-4 py-2 hover:bg-red-100 text-black"
                 >
-                  {group}
+                  {dept}
                 </button>
               ))}
             </div>
           )}
+        </div>
+
+        {/* Blood Group Dropdown */}
+        <div className="relative">
+          <p className="mb-1 font-semibold text-red-700">Blood Group:</p>
+          <select
+            value={form.bloodGroup}
+            onChange={(e) => setForm({ ...form, bloodGroup: e.target.value })}
+            className="w-full bg-white border border-red-300 p-2 rounded text-black"
+            required
+          >
+            <option value="" disabled>Select Blood Group</option>
+            {bloodGroups.map((group) => (
+              <option key={group} value={group}>
+                {group}
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Available Checkbox */}
