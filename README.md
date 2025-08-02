@@ -22,13 +22,12 @@ A life-saving platform built to connect blood donors with patients in need, espe
 - Next.js 14 (App Router)
 - Tailwind CSS
 - Prisma + PostgreSQL (NeonDB)
-- NextAuth.js for login
-- Firebase (for future push notifications)
+
 
 ## 🚀 Getting Started
 
 1. Clone the repo  
-   `git clone https://github.com/your-username/blood-donor-connect.git`
+   `git clone https://github.com/somuraj07/sgi-donars.git`
 
 2. Install dependencies  
    `npm install`
@@ -40,7 +39,4 @@ A life-saving platform built to connect blood donors with patients in need, espe
 
 Feel free to raise issues or submit PRs to improve the project.
 
-## 📜 License
-
-MIT
 
