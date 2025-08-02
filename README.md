@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blood Donor Connect
 
-## Getting Started
+A life-saving platform built to connect blood donors with patients in need, especially in emergency situations. Inspired by real hospital experiences where many patients struggled due to a lack of immediate donor contact — not because donors didn't exist, but because there was no way to reach them.
 
-First, run the development server:
+## 💡 Motivation
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> "My name is **Shankar Kalyankar**.  
+> I've seen many people in super specialty hospitals struggling during blood emergencies.  
+> This website is my small attempt to help.  
+> In our college itself, we have many willing donors — the real problem is **approach**.  
+> If this site helps even one person, it will be worth it."
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 📋 Blood donor list with department & blood group filters
+- 📱 Mobile-friendly design with modern UI
+- 🧠 Feedback section for donor experiences
+- 🔍 Real-time donor availability (planned)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔨 Tech Stack
 
-## Learn More
+- Next.js 14 (App Router)
+- Tailwind CSS
+- Prisma + PostgreSQL (NeonDB)
+- NextAuth.js for login
+- Firebase (for future push notifications)
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repo  
+   `git clone https://github.com/your-username/blood-donor-connect.git`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Install dependencies  
+   `npm install`
 
-## Deploy on Vercel
+3. Run locally  
+   `npm run dev`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feel free to raise issues or submit PRs to improve the project.
+
+## 📜 License
+
+MIT
+

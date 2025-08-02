@@ -1,8 +1,9 @@
+/* Your existing styles */
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff;   /* White background */
+  --foreground: #b00020;   /* Deep red text */
 }
 
 @theme inline {
@@ -14,8 +15,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #efdde1;  /* Deep red background */
+    --foreground: #ffffff;  /* White text */
   }
 }
 
@@ -24,3 +25,5 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
