@@ -22,7 +22,7 @@ const Navbar = () => {
             onClick={() => handleNavigation('/api/donar/new')}
             className="hover:text-yellow-200 transition-colors duration-200 text-base font-medium"
           >
-            Donor
+            Register
           </button>
           <button
             onClick={() => handleNavigation('/alldonars')}
