@@ -25,7 +25,7 @@ export default function DonarForm() {
     e.preventDefault();
     try {
       const res = await axios.post("/api/donar", form);
-      toast.success("Donor created successfully!");
+      toast.success("Donor created successfully! ✅");
       setForm({
         name: "",
         email: "",
