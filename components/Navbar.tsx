@@ -25,6 +25,8 @@ const Navbar = () => {
             <button onClick={() => handleNavigation("/api/donar/new")} className="hover:text-yellow-200 font-medium">Register</button>
             <button onClick={() => handleNavigation("/alldonars")} className="hover:text-yellow-200 font-medium">All Donors</button>
             <button onClick={() => handleNavigation("/allfeedbacks")} className="hover:text-yellow-200 font-medium">About</button>
+            <button onClick={() => handleNavigation("/signin")} className="hover:text-yellow-200 font-medium">Admin</button>
+
           </div>
 
           <div className="sm:hidden">
@@ -55,6 +57,7 @@ const Navbar = () => {
           <button onClick={() => handleNavigation("/api/donar/new")} className="hover:text-yellow-200 text-left font-medium">Register</button>
           <button onClick={() => handleNavigation("/alldonars")} className="hover:text-yellow-200 text-left font-medium">All Donors</button>
           <button onClick={() => handleNavigation("/allfeedbacks")} className="hover:text-yellow-200 text-left font-medium">About</button>
+          <button onClick={() => handleNavigation("/signin")} className="hover:text-yellow-200 text-left font-medium">Admin</button>
         </div>
       </div>
     </>
